@@ -19,7 +19,22 @@ En el servidor `app.js`, hacemos referencia al archivo que contiene la clase y l
 3. Ejecuta los siguientes comandos desde un CMD para compilar el proyecto:
     - Instala las dependencias a partir del comando `npm install <nodemon - express>`
     - Ejecutar `npm run dev` para comenzar con el Testeo del aplicativo.
-    - Abrir una pagina web `http://localhost:8080/products` para realizar los queries correspondientes.
+    - Abrir una pagina web `http://localhost:8080/products` para realizar los queries correspondientes:
+      * `http://localhost:8080/products`: respondera con todos los productos en catalogo.
+      * `http://localhost:8080/products?list=5` respondera con solo los primeros 5 productos en catalogo.
+      * `http://localhost:8080/products?list=0` respondera con todos los productos en catalogo.
+      * `http://localhost:8080/products/2` respondera con el producto ID = 2 en catalogo.
+      * `http://localhost:8080/products/15` respondera con un error (solo hay 10 productos en el catalogo).
+    - Desde un POSTMAN contiene la posibilidad de agregar Productos mediante lo siguiente:
+      * Body < Raw < JSON:
+        {
+          "title":"Llavero",
+          "description":"Azul",
+          "thumbnail": "https://www.google.com",
+          "price": null,
+          "code":"adf121", 
+          "stock": 100
+        }
       
 ## Estructura de directorios
 - `data/`: Este directorio contiene la ubicacion donde se crea el archivo "products.json" que los datos utilizados en el proyecto.
