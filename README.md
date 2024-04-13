@@ -26,7 +26,7 @@ En el servidor `app.js`, hacemos referencia al archivo que contiene la clase y l
       * `http://localhost:8080/products/2` respondera con el producto ID = 2 en catalogo.
       * `http://localhost:8080/products/15` respondera con un error (solo hay 10 productos en el catalogo).
     - Desde un POSTMAN contiene la posibilidad de agregar Productos mediante lo siguiente:
-      * `Body < Raw < JSON` desde POSTMAN para escribir el Agregar.
+      * `Body < Raw < JSON` desde POSTMAN para agregar el Producto.
       * Producto: `{
          "title":"Llavero",
          "description":"Azul",
